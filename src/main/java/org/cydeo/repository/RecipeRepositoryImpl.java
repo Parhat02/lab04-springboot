@@ -1,0 +1,21 @@
+package org.cydeo.repository;
+
+import org.cydeo.model.Recipe;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
+public class RecipeRepositoryImpl implements RecipeRepository{
+
+    //we need to create one list of recipe to keep all recipes, and save method will add recipe to that list
+    List<Recipe> recipeList = new ArrayList<>();
+    @Override
+    public boolean save(Recipe recipe) {
+
+        return recipeList.add(recipe);
+    }
+
+
+}
