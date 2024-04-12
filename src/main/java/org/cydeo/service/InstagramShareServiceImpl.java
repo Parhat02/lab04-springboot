@@ -1,7 +1,9 @@
 package org.cydeo.service;
 
 import org.cydeo.model.Recipe;
+import org.springframework.stereotype.Component;
 
+@Component
 public class InstagramShareServiceImpl implements ShareService{
     @Override
     public boolean shareService(Recipe recipe) {
